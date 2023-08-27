@@ -10,9 +10,25 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-  <header></header>
-  <main></main>
+<body class="bg-zinc-600">
+  <header>
+    <h3>Hunting Phone</h3>
+  </header>
+  <main class="container mx-auto mt-8">
+    <section class="bg-gray-100 p-4 m-4">
+
+      <input id="sarche_fild" type="text" placeholder="Search..."
+        class=" bg-zinc-600 input input-bordered w-full max-w-xs" />
+      <button class="btn btn-accent" onclick="handleSarch()">Search</button>
+    </section>
+    <!-- Searce Result -->
+    <section>
+      <div id="phone_container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+
+
+      </div>
+    </section>
+  </main>
   <footer></footer>
   <script src="js/app.js"></script>
 </body>
