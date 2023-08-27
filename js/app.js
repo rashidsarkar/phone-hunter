@@ -10,6 +10,18 @@ const loadPhone = async (phoneName) => {
 
 const displayPhones = (phones) => {
   const phoneContainer = document.getElementById("phone_container");
+  // console.log(phones.length);
+  //Display Show ALL BTN
+  const showAllContainer = document.getElementById("show_all");
+  if (phones.length > 12) {
+    showAllContainer.classList.remove("hidden");
+  } else if (phones.length < 12) {
+    showAllContainer.classList.add("hidden");
+  }
+  // display only fast 10 phones
+  phones = phones.slice(0, 12);
+  //clrear phone
+  phoneContainer.textContent = "";
   // console.log(phone);
   phones.forEach((phone) => {
     console.log(phone);
@@ -33,6 +45,12 @@ const displayPhones = (phones) => {
 const handleSarch = () => {
   const sarcheFild = document.getElementById("sarche_fild");
   const sarchText = sarcheFild.value;
-  console.log(sarchText);
+  // console.log(sarchText);
+  loadPhone(sarchText);
+};
+const handleSarch2 = () => {
+  const searchFild = document.getElementById("sarche_fild2");
+  const sarchText = searchFild.value;
+  loadPhone(sarchText);
 };
 // loadPhone();

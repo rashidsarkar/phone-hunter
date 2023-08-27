@@ -20,13 +20,22 @@
       <input id="sarche_fild" type="text" placeholder="Search..."
         class=" bg-zinc-600 input input-bordered w-full max-w-xs" />
       <button class="btn btn-accent" onclick="handleSarch()">Search</button>
+      <!-- Another sarch Fild -->
+      <input id="sarche_fild2" type="text" placeholder="Search... Here"
+        class=" bg-zinc-600 input input-bordered w-full max-w-xs" />
+      <button class="btn btn-primary" onclick="handleSarch2()">Search</button>
     </section>
     <!-- Searce Result -->
-    <section>
+    <section class="bg-zinc-600">
       <div id="phone_container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <!-- Show ALl BTN -->
 
 
       </div>
+      <div id="show_all" class="hidden">
+        <button class="btn btn-accent">Show ALL</button>
+      </div>
+
     </section>
   </main>
   <footer></footer>
