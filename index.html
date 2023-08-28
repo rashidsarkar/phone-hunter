@@ -10,33 +10,54 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-zinc-600">
+<body class="">
   <header>
-    <h3>Hunting Phone</h3>
+    <h3 class="text-5xl">Hunting Phone</h3>
   </header>
   <main class="container mx-auto mt-8">
-    <section class="bg-gray-100 p-4 m-4">
+    <section class="p-4 m-4 bg-gray-100">
 
-      <input id="sarche_fild" type="text" placeholder="Search..."
-        class=" bg-zinc-600 input input-bordered w-full max-w-xs" />
+      <input id="sarche_fild" type="text" placeholder="Search..." class="w-full max-w-xs input input-bordered" />
       <button class="btn btn-accent" onclick="handleSarch()">Search</button>
       <!-- Another sarch Fild -->
-      <input id="sarche_fild2" type="text" placeholder="Search... Here"
-        class=" bg-zinc-600 input input-bordered w-full max-w-xs" />
-      <button class="btn btn-primary" onclick="handleSarch2()">Search</button>
+      <!-- <input id="sarche_fild2" type="text" placeholder="Search... Here" class="w-full max-w-xs input input-bordered" />
+      <button class="btn btn-primary" onclick="handleSarch2()">Search</button> -->
     </section>
+
     <!-- Searce Result -->
-    <section class="bg-zinc-600">
-      <div id="phone_container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+    <section class="">
+      <!-- loding  -->
+      <div id="spiner" class="hidden my-40 text-center">
+        <span class="loading loading-spinner loading-lg"></span>
+      </div>
+      <!-- loding  -->
+      <div id="phone_container" class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
         <!-- Show ALl BTN -->
 
 
       </div>
-      <div id="show_all" class="hidden">
-        <button class="btn btn-accent">Show ALL</button>
+      <div id="show_all" class="hidden my-8 text-center">
+        <button class="btn btn-accent" onclick="handelShowAll()">Show ALL</button>
       </div>
 
     </section>
+    <!-- modal  -->
+    <div>
+      <!-- Open the modal using ID.showModal() method -->
+
+      <dialog id="show_details" class="modal modal-bottom sm:modal-middle">
+        <form method="dialog" class="modal-box">
+          <h3 id="phone_name" class="text-3xl font-bold ">Hello!</h3>
+          <div id="showDetailContainer">
+
+          </div>
+          <div class="modal-action">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </div>
+        </form>
+      </dialog>
+    </div>
   </main>
   <footer></footer>
   <script src="js/app.js"></script>
